@@ -3,14 +3,14 @@
 # conv2jpg
 # Invoke by: conv2jpeg <filename>
 # Takes selected file and converts, if able, to .jpg
-# Orignal Creation: 24NOV20
-#  Released under Apache 2.0 License
+# Original Creation: 24NOV20
+# Released under Apache 2.0 License
 
 import os # For checking file path and replacing file extension
 import sys # For parsing input arguments 
-from PIL import image # For image conversion
+from PIL import Image # For image conversion
 
-if sys.argv == True:
+if len(sys.argv) > 1:
     if os.path.exists(sys.argv[1]):
         img2conv = Image.open(sys.argv[1])
         convimg_color = img2conv.convert("RGB")
